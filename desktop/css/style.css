@@ -1,0 +1,367 @@
+body {
+	font-family: Helvetica,Helvetica Neue,Segoe UI;
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100%;
+	background: #5B8BA6;
+}
+
+button {
+	background: #00bcde;
+	color: white;
+	font-weight: bold;
+	border: none;
+	box-shadow: none;
+	margin: 0px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #00C9ED;
+}
+
+button:active {
+	background: #00bcde;
+}
+
+input {
+	background: white;
+	color: #00bcde;
+	border: #00bcde 1px solid;
+}
+
+.apps {
+	display: none;
+}
+
+.desktop {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/*desktop apps*/
+.desktop .launcher
+{
+	cursor:pointer;
+	float:left;
+	margin:5px;		
+	text-align:center;
+	padding:5px;
+	padding-bottom: 2px;
+	border: 1px solid transparent;
+}
+.desktop .launcher:hover
+{
+	background: rgba(0,201,237,0.5);
+	background: -moz-linear-gradient(top, rgba(0,201,237,0.5) 0%, rgba(0,201,237,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,201,237,0.5)), color-stop(100%,rgba(0,201,237,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,201,237,0.5) 0%,rgba(0,201,237,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,201,237,0.5) 0%,rgba(0,201,237,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,201,237,0.5) 0%,rgba(0,201,237,0.3) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(0,201,237,0.5) 0%,rgba(0,201,237,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8000c9ed', endColorstr='#4d00c9ed',GradientType=0 ); /* IE6-9 */
+	border: 1px solid rgba(63,133,145,0.7);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.launcher .icon
+{
+	width:50px;
+	height:50px;
+	display: inline-block;
+	border:none;
+	background:transparent;
+}
+.launcher .name
+{
+	font-size:90%;
+	color:white;	
+	display: inline-block;
+	border-radius: 4px;
+	background: rgba(0,0,0,0.3);
+	padding-left: 4px;
+	padding-right: 4px;	
+	top: -3px;
+	position: relative;	
+}
+
+/*taskbar*/
+
+.taskbar {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	z-index: 99;
+	background: url('../images/white.png');
+}
+
+.start {
+	float: left;
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	color: #00bcde;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.start:hover {
+	color: white;
+	background: #00bcde;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.separator {
+	width: 1px;
+	height: 38px;
+	margin: 1px;
+	float: left;	
+	background: #00bcde;
+}
+
+.tasks {
+	float: left;
+	height: 40px;	
+}
+
+.tasks .task {
+	float: left;
+	height: 40px;
+	line-height: 40px;	
+	padding-right: 10px;
+	color: #009bb7;
+	cursor: pointer;
+	background: white;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.tasks .task.active {
+	background: #68B5BA;
+	color: white;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.tasks .task:hover {
+	background: #009bb7;
+	color: white;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.tasks .task .icon
+{
+	height:40px;
+	width:40px;
+	border:none;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+.time {
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	color: #009bb7;
+	cursor: pointer;
+}
+.time label {
+	cursor: pointer;
+}
+
+.date {
+	position: absolute;
+	bottom: 40px;
+	right: 0px;
+	width: 150px;
+	height: 40px;
+	background: rgba(255,255,255,0.8);	
+	color: #009bb7;
+	cursor: default;
+	line-height: 40px;
+	border: solid 1px #009bb7;
+	display: none;
+}
+
+.tray
+{
+	float:right;
+	width:60px;
+	height:40px;
+}
+/*start menu*/
+.startmenu {
+	position: fixed;
+	left: 0px;
+	bottom: 40px;
+	width: 250px;
+	background: url('../images/white.png');
+	display: none;
+	z-index:99;
+}
+
+.user-box {
+	height: 50px;
+	cursor: pointer;
+}
+
+.user-box img.avatar {
+	height: 50px;
+	width: 50px;
+	display: block;
+	float: left;
+}
+
+.user-box .user-info {
+	float: left;
+	padding-left: 5px;
+	padding-top: 5px;
+	color: #0099b5;
+}
+
+.user-info span {
+	font-size: 90%;
+	color: #23c1de;
+}
+
+.startmenu .items {
+	width:100%;
+	max-height: 500px;
+	overflow: auto;
+}
+
+.startmenu .items .item {
+	height: 40px;	
+	line-height: 40px;
+	padding-left: 5px;
+	color: #009bb7;
+	cursor: pointer;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.startmenu .items .item:hover {
+	color: white;
+	background: #009bb7;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.startmenu .item a, .startmenu .item a:visited {
+	color: #009bb7;
+	text-decoration: none;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.startmenu .item:hover a, .startmenu .item a:hover {
+	color: white;
+	transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+/*app styles*/
+div.run {
+	text-align: center;
+	padding: 5px;
+}
+.browser
+{
+	min-width:700px;
+}
+.browser-content
+{
+	height:500px;
+}
+.browser-bar
+{
+	height:21px;
+	border-bottom:1px solid #009bb7;
+}
+.browser-frame
+{
+	width:100%;
+	height:100%;
+	box-shadow:none;
+	border:none;
+	border-top:1px solid #009bb7;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.browser-bar input
+{
+	border:none;	
+	height:20px;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	color: #2d2d2d;
+	background: transparent;
+	-webkit-appearance: none;
+	outline:none;
+}
+.browser-bar input:focus {
+	border: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	outline:none;
+}
+.browser .go
+{
+	height:21px;	
+	margin-left: -30px;
+	width: 30px;
+	background: #2d2d2d;
+	color: white;		
+}
+.browser .go:hover
+{
+	cursor: pointer;
+	color: white;
+	background: #2BACE5;
+}
+.browser form
+{
+	height:20px;
+	margin:0px;
+	padding:0px;
+}
+.browser-content .ui-resizable-se
+{
+	width:10px;
+	height:10px;
+	float:right;
+	/*position:relative;
+	top:-10px;*/
+	cursor:se-resize;
+}
