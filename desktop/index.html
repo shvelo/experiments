@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HTML Desktop Experiment</title>
+<link rel="shortcut icon" href="images/icons/main.png">
+<link rel="stylesheet" href="vegas/jquery.vegas.css">
+<link rel="stylesheet" href="fancybox/fancybox.css">
+<link rel="stylesheet" href="css/window.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/modernizr.js"></script>
+<script>
+	Modernizr.load({
+		load : 'js/jquery.js',
+		complete : function() {
+			Modernizr.load({
+				load : [ 'vegas/jquery.vegas.js', 'js/jquery.ui.js',
+						'js/jquery.simpletip.js', 'fancybox/fancybox.js',
+						'fancybox/jquery.easing.js','js/spin.min.js','js/window.js'],
+				complete : function() {
+					Modernizr.load('js/script.js');
+				}
+			});
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="desktop">
+		<div class="launcher" data-id="1">
+			<img class="icon" src="images/icons/run.png"><br>
+			<span class="name">Run</span>
+		</div>
+		<div class="launcher" data-id="2">
+			<img class="icon" src="images/icons/browser.png"><br>
+			<span class="name">Browser</span>
+		</div>
+	</div>
+	<div class="taskbar">
+		<div class="start">start</div>
+		<div class="separator"></div>
+		<div class="tasks"></div>		
+		<div class="tray">
+			<div class="separator"></div>
+			<div class="time">
+				<div class="date"></div>				
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<div class="startmenu">
+		<div class="user-box">
+			<img class="avatar" src="images/avatar.png">
+			<div class="user-info">
+				Nick Shvelidze <br> <span>web developer</span>
+			</div>
+		</div>
+		<div class="items">
+			<div class="item" data-id="2">Browser</div>
+			<div class="item" data-id="1">Run</div>
+			<div class="item"><a href="/">Back to experiments</a></div>
+		</div>		
+	</div>
+	<div class="apps">
+		<div data-id="1" class="app">
+			<div class="title">Run</div>
+			<img class="icon" src="images/icons/run.png">
+			<div class="content">
+				<div class="run">
+					Run:<br>
+					<input type="text"><br>
+					<button style="width: 100%; border-radius: 5px">RUN</button>
+				</div>
+			</div>
+		</div>
+		<div data-id="2" class="app">
+		<div class="title">Browser</div>
+		<img class="icon" src="images/icons/browser.png">
+			<div class="content">
+				<div class="browser">
+					<div class="browser-bar">
+					<form><input type="text" class="address" value="http://" /><input class="go" type="submit" value="GO"></form>
+					</div>
+					<div class="browser-content">
+					<iframe class="browser-frame" src="browser.html"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
