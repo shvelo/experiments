@@ -109,7 +109,7 @@ $(function() {
 		$('.date').slideToggle();
 	});
 	$('.user-box').click(function() {
-		window.open("http://developpr.com");
+		window.open("http://shvelo.github.com");
 	});
 	$('.tasks').css(
 			'width',
