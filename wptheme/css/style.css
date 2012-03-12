@@ -118,6 +118,7 @@ body > footer .author {
 
 .post {	
 	margin-top: 0.5cm;
+	margin-bottom: 0.5cm;
 }
 
 .post header {	
@@ -128,7 +129,7 @@ body > footer .author {
 	padding-left: 1cm;
 	padding-right: 2em;
 	background: url('../img/post_icons/post.png') no-repeat top right;
-	background-size: auto 100%;
+	background-size: auto 90%;
 }
 
 .post article {	
