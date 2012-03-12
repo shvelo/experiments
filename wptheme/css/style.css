@@ -182,14 +182,14 @@ body > footer .author {
 }
 
 .widget.search form {
-	
+	height: 2em;
 }
 
 .widget.search input {
 	outline: none;
 	width: 80%;
-	display: inline-block;	
-	vertical-align: top;
+	display: block;	
+	float: left;
 	border: none;
 	height: 2em;
 	line-height: 2em;	
@@ -204,8 +204,8 @@ body > footer .author {
 
 .widget.search button {
 	width: 20%;
-	display: inline-block;
-	vertical-align: top;	
+	display: block;	
+	float: left;
 	border: none;
 	height: 2em;
 	line-height: 2em;
