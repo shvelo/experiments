@@ -29,7 +29,7 @@ a:hover {
 }
 
 body > footer {
-	background: #93A1A1;
+	background: #f16e50;
 	margin-top: -1cm;
 	height: 1cm;	
 	line-height: 1cm;
@@ -51,7 +51,7 @@ body > footer .author {
 	display: inline-block;
 	vertical-align: top;
 	width: 25%;
-	background: url('../img/sidebar.png');
+	background: #fefefe;
 }
 
 .posts {	
