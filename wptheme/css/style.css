@@ -182,7 +182,7 @@ body > footer .author {
 }
 
 .widget.search form {
-	height: 2em;
+	height: 1.5em;
 	border-radius: 5px;
 	box-shadow: 0 0 2px #4ECDC4;
 	background: #4ECDC4;
@@ -195,8 +195,8 @@ body > footer .author {
 	float: left;
 	border: none;
 	color: white;
-	height: 2em;
-	line-height: 2em;	
+	height: 1.5em;
+	line-height: 1.5em;	
 	background: transparent;
 	font-size: 15pt;
 	border-top-left-radius: 5px;
@@ -215,8 +215,8 @@ body > footer .author {
 	display: block;	
 	float: left;
 	border: none;
-	height: 2em;
-	line-height: 2em;
+	height: 1.5em;
+	line-height: 1.5em;
 	background: url('../img/search.png') no-repeat center center;
 	background-size: auto 2em;
 	border-top-right-radius: 5px;
