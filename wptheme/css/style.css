@@ -6,7 +6,8 @@ html, body {
 }
 
 a {
-	color: #ff6868;
+	color: white;
+	text-shadow: 1px 2px 2px #454545;
 	text-decoration: none;
 	font-weight: bold;
 	transition-duration: 0.5s;
@@ -16,12 +17,13 @@ a {
 }
 
 a:hover {
-	color: #cf5b40;
+	color: #C7F464;
 }
 
 .container {
 	min-height: 100%;
-	background: #fffcf3;
+	background: #556270;
+	color: white;
 }
 
 .padder {
@@ -29,7 +31,7 @@ a:hover {
 }
 
 body > footer {
-	background: #555152;
+	background: #4ECDC4;
 	margin-top: -1cm;
 	height: 1cm;	
 	line-height: 1cm;
@@ -67,9 +69,10 @@ body > footer .author {
 	height: 3em;
 	line-height: 3em;
 	color: white;
-	background: #FF847C;
+	background: #4ECDC4;
 	margin-top: 0.5cm;
 	font-weight: bold;
+	text-shadow: 1px 2px 2px #454545;
 }
 
 .menu {
@@ -89,11 +92,12 @@ body > footer .author {
 	text-decoration: none;
 	color: #4e4e4e;
 	display: block;	
+	color: white;
+	text-shadow: 1px 2px 2px #454545;
 }
 
-.menu li a:hover, .sidebar .menu li a.active {
-	color: white;
-	background: #FF847C;
+.menu li a:hover, .sidebar .menu li a.active {	
+	background: #4ECDC4;
 }
 
 .widget {
@@ -104,14 +108,15 @@ body > footer .author {
 	font-size: 1.4em;
 	line-height: 1.5em;
 	text-align: center;
-	background: #FF847C;
+	background: #4ECDC4;
 	color: white;
 	font-weight: bold;	
+	text-shadow: 1px 2px 2px #454545;
 }
 
 .widget aside {
 	padding: 0.5em 1em 0.5em 1em;
-	color: #3d3d3d;
+	color: white;
 	font-size: 1.4em;
 }
 
@@ -123,31 +128,27 @@ body > footer .author {
 .post header {	
 	font-size: 1.5em;
 	line-height: 2em;
-	color: #f16e50;
-	border-bottom: 1px solid #ebebeb;
+	color: white;
+	border-bottom: 1px solid #93a1ad;
 	padding-left: 1cm;
 	padding-right: 2em;
 	background: url('../img/post_icons/post.png') no-repeat top right;
 	background-size: auto 90%;
+	text-shadow: 1px 2px 2px #454545;
 }
 
 .post article {	
 	padding-top: 0.7em;	
 	padding-bottom: 0.7em;
-	color: #454545;
+	color: white;
 	padding-left: 1cm;	
 	font-size: 1.2em;	
 }
 
-.post article a {
-	color: #f16e50;
-}
-
 .post footer {
-	border-top: 1px solid #ebebeb;	
-	border-bottom: 1px solid #ebebeb;	
-	line-height: 2em;
-	color: #757575;
+	border-top: 1px solid #93a1ad;	
+	border-bottom: 1px solid #93a1ad;	
+	line-height: 2em;	
 	font-size: 110%;
 	padding-left: 1cm;
 }
@@ -159,8 +160,7 @@ body > footer .author {
 	text-decoration: none;
 }
 
-.post footer a.author {	
-	color: #454545;
+.post footer a.author {		
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -183,6 +183,9 @@ body > footer .author {
 
 .widget.search form {
 	height: 2em;
+	border-radius: 5px;
+	box-shadow: 0 0 2px #4ECDC4;
+	background: #4ECDC4;
 }
 
 .widget.search input {
@@ -191,15 +194,20 @@ body > footer .author {
 	display: block;	
 	float: left;
 	border: none;
+	color: white;
 	height: 2em;
 	line-height: 2em;	
 	background: transparent;
 	font-size: 15pt;
 	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-top: 1px solid #f16e50;
-	border-bottom: 1px solid #f16e50;
-	border-left: 1px solid #f16e50;	
+	border-bottom-left-radius: 5px;		
+}
+
+.widget.search input::-webkit-input-placeholder {
+    color:    white;
+}
+.widget.search input:-moz-placeholder {
+    color:    white;
 }
 
 .widget.search button {
@@ -212,8 +220,5 @@ body > footer .author {
 	background: url('../img/search.png') no-repeat center center;
 	background-size: auto 2em;
 	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-top: 1px solid #f16e50;
-	border-bottom: 1px solid #f16e50;
-	border-right: 1px solid #f16e50;	
+	border-bottom-right-radius: 5px;	
 }
