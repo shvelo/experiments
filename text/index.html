@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<title>Text demo</title>
+<style>
+html,body {
+	background: url(wood.jpg) #2d2d2d;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.terminal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;	
+}
+
+.screen {
+	background: black;
+	border: 2px groove #2d2d2d;
+	border-radius: 20px;	
+	margin: 1%;
+	padding: 0.5%;
+	height: 96%;
+	box-shadow: 0 0 5px #2d2d2d, 0 0 2px #2d2d2d inset;
+}
+
+#out {
+	color: #00ff00;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;	
+	margin: 0;
+}
+
+#out span:last-child {
+	text-shadow: 0 0 5px #00ff00;
+	text-decoration: underline;
+	-o-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	-webkit-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+</style>
+
+<body>
+
+<div class="terminal">
+	<div class="screen">
+		<p id="out"></p>
+	</div>	
+</div>
+
+<p id="in" style="display:none">ROBCO TERMINAL 2.8
+INITIALIZING SYSTEM..................
+$ LOGIN
+USER: ROOT
+
+~# MAINT
+MAINTENANCE MODE
+RESTARTING SYSTEM...
+
+ROBCO TERMINAL 2.8
+INITIALIZING SYSTEM..................
+LOADING MODULES......................
+INITIALIZING CONNECTION......................
+WAITING FOR MAINFRAME.......................
+
+LOGIN: ROOT
+PASSWORD: *******
+
+ACCESS LEVEL: MAINT
+
+NAME: Courier
+
+Welcome!
+
+NO MESSAGES!</p>
+
+<script src="jquery.min.js"></script>
+<script src="jquery.color.min.js"></script>
+<script>
+function replace(arrayName,replaceTo, replaceWith)
+{
+  for(var i=0; i<arrayName.length;i++ )
+  {  
+  if(arrayName[i]==replaceTo)
+  arrayName.splice(i,1,replaceWith);  
+  }  
+}
+
+var text = $('#in').text();
+var chars = text.split('');
+replace(chars,"\n",'<br>');
+replace(chars,"\r\n",'<br>');
+var pointer = 0;
+
+function update() {
+	if(pointer <= chars.length - 1) {
+		$('#out').append('<span>'+chars[pointer]+'</span>');		
+		pointer++;
+	} else if(pointer == chars.length) {
+		$('#out').append('<span></span>');
+		pointer++;
+	}
+}
+
+$('.screen').animate({
+		backgroundColor:'#454545'
+	},1000,function(){
+		setInterval(update,100);
+});	
+</script>
