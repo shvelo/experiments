@@ -1,151 +1,15 @@
 <!DOCTYPE html>
-<title>Sprite Animation</title>
-
-<style>
-
-html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background: url(skyline.png) repeat-x #b6b8b8;
-	overflow: hidden;
-	-webkit-animation: sky 4s linear 0s infinite;
-	-webkit-transform: translateZ(0);
-}
-
-@-webkit-keyframes sky {
-	0% {
-		background-position: 0 0;
-	}
-	
-	100% {
-		background-position: -500px 0;
-	}
-}
-
-.character {
-	position: relative;
-	width: 330px;
-	height: 236px;
-	background: url(char.png) 0 0 no-repeat;
-	-webkit-animation-name: character;
-	-webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-play-state: running;
-	-webkit-animation-delay: 0;
-	-webkit-animation-timing-function: steps(1);
-	-webkit-transform: translateZ(0);
-}
-
-@-webkit-keyframes character {
-	0% {
-		left: 10px;
-	}
-	
-	50% {
-		left: 0;
-	}
-}
-
-.character-behavior {
-	z-index: 99;
-	position: absolute;
-	width: 330px;
-	height: 236px;
-	margin-left: -215px;
-	bottom: 20%;
-	left: 50%;
-	-webkit-transition-duration: .8s;
-}
-
-.character-behavior:hover {
-	bottom: 32%;
-}
-
-.character-behavior:hover .character {
-	-webkit-animation-name: character-jump;
-}
-
-
-@-webkit-keyframes character-jump {
-	0% {
-		left: 10px;
-		bottom: 10px;
-	}
-	
-	50% {
-		left: 0;
-		bottom: 0;
-	}
-}
-
-.ground {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 20%;
-	background: url(ground.png);
-	-webkit-animation: ground 10s linear 0s infinite;
-	-webkit-transform: translateZ(0);
-}
-
-
-@-webkit-keyframes ground {
-	0% {
-		background-position: 0 0;
-	}
-	
-	100% {
-		background-position: -100% 0;
-	}
-}
-
-.buildings {
-	position: absolute;
-	bottom: 18%;
-	left: 0;
-	width: 100%;
-	height: 340px;
-	background: url(buildings.png);
-	-webkit-animation: buildings 14s linear 0s infinite;
-}
-
-.building {	
-	width: 340px;
-	height: 340px;
-	display: inline-block;
-	background: url(building.png);
-}
-
-.building.garage {
-	width: 300px;
-	height: 300px;
-	background: url(garage.png);
-}
-
-@-webkit-keyframes buildings {
-	0% {
-		background-position: 0 0;
-	}
-	
-	100% {
-		background-position: -2560px 0;
-	}
-}
-
-</style>
+<meta charset="utf-8">
+<title>CSS3 Animation</title>
+<meta name="author" content="Nick Shvelidze">
+<meta name="description" content="CSS3 Animation experiment by Nick Shvelidze">
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheer" href="css/style.css">
 
 <div class="character-behavior">
 	<div class="character"></div>
 </div>
 
-<div class="buildings">
-</div>
+<div class="buildings"></div>
 
-<div class="ground">
-
-</div>
+<div class="ground"></div>

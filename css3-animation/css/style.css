@@ -1,0 +1,187 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../img/skyline.png) repeat-x #b6b8b8;
+	overflow: hidden;
+	-webkit-animation: sky 4s linear 0s infinite;
+	-moz-animation: sky 4s linear 0s infinite;
+	animation: sky 4s linear 0s infinite;
+	-webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes sky {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -500px 0;
+	}
+}
+
+@-moz-keyframes sky {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -500px 0;
+	}
+}
+
+@keyframes sky {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -500px 0;
+	}
+}
+
+.character {
+	position: relative;
+	width: 330px;
+	height: 236px;
+	background: url(../img/char.png) 0 0 no-repeat;
+	-webkit-animation: character 1s steps(1) 0s infinite;
+	-moz-animation: character 1s steps(1) 0s infinite;
+	animation: character 1s steps(1) 0s infinite;
+	-webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes character {
+	0% {
+		left: 10px;
+	}
+	
+	50% {
+		left: 0;
+	}
+}
+
+@-moz-keyframes character {
+	0% {
+		left: 10px;
+	}
+	
+	50% {
+		left: 0;
+	}
+}
+
+@keyframes character {
+	0% {
+		left: 10px;
+	}
+	
+	50% {
+		left: 0;
+	}
+}
+
+.character-behavior {
+	z-index: 99;
+	position: absolute;
+	width: 330px;
+	height: 236px;
+	margin-left: -215px;
+	bottom: 20%;
+	left: 50%;
+	-webkit-transition-duration: .8s;
+	-moz-transition-duration: .8s;
+	transition-duration: .8s;
+}
+
+.character-behavior:hover {
+	bottom: 32%;
+}
+
+.character-behavior:hover .character {
+	-webkit-animation-name: character-jump;
+	-moz-animation-name: character-jump;
+	animation-name: character-jump;
+}
+
+
+@-webkit-keyframes character-jump {
+	0% {
+		left: 10px;
+		bottom: 10px;
+	}
+	
+	50% {
+		left: 0;
+		bottom: 0;
+	}
+}
+
+.ground {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background: url(../img/ground.png);
+	-webkit-animation: ground 10s linear 0s infinite;
+	-moz-animation: ground 10s linear 0s infinite;
+	animation: ground 10s linear 0s infinite;
+	-webkit-transform: translateZ(0);
+}
+
+
+@-webkit-keyframes ground {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -100% 0;
+	}
+}
+
+.buildings {
+	position: absolute;
+	bottom: 18%;
+	left: 0;
+	width: 100%;
+	height: 340px;
+	background: url(../img/buildings.png);
+	-webkit-animation: buildings 14s linear 0s infinite;
+	-moz-animation: buildings 14s linear 0s infinite;
+	animation: buildings 14s linear 0s infinite;
+}
+
+@-webkit-keyframes buildings {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -2560px 0;
+	}
+}
+
+@-moz-keyframes buildings {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -2560px 0;
+	}
+}
+
+@keyframes buildings {
+	0% {
+		background-position: 0 0;
+	}
+	
+	100% {
+		background-position: -2560px 0;
+	}
+}
