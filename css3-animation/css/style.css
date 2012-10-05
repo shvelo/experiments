@@ -90,7 +90,7 @@ body {
 	width: 330px;
 	height: 236px;
 	margin-left: -215px;
-	bottom: 20%;
+	bottom: 16%;
 	left: 50%;
 	-webkit-transition-duration: .8s;
 	-moz-transition-duration: .8s;
@@ -125,7 +125,7 @@ body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 20%;
+	height: 25%;
 	background: url(../img/ground.png);
 	-webkit-animation: ground 10s linear 0s infinite;
 	-moz-animation: ground 10s linear 0s infinite;
@@ -146,10 +146,11 @@ body {
 
 .buildings {
 	position: absolute;
-	bottom: 18%;
+	bottom: 17%;
 	left: 0;
 	width: 100%;
 	height: 340px;
+	z-index: 89;
 	background: url(../img/buildings.png);
 	-webkit-animation: buildings 14s linear 0s infinite;
 	-moz-animation: buildings 14s linear 0s infinite;
